@@ -737,42 +737,77 @@ h3.my-professional{
 }
 
 /*Projects*/
-.portfolio-project-heading h2{
-  color: var(--text-black-700);
-  font-weight: 600;
-  margin-bottom: 100px;
+.project-row {
+  position: relative;
+}
+
+.portfolio-project-heading {
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding-top: 50px;
   text-align: center;
   justify-content: center;
   align-items: center;
+  z-index: 1000; /* Ensure it's on top of other content */
 }
-.project-container{
+
+.progress-bar {
+  width: 100%;
+  height: 5px;
+  background-color: #ddd; /* Light grey background */
+  margin-top: 10px;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  width: 0;
+  background-color: #1E3A8A; /* Blue color for progress */
+  transition: width 0.25s ease-out;
+}
+
+.project-container {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-bottom: 100px;
+  gap: 100px;
 }
-.main-title{
+
+.main-title {
   font-size: 3em;
   color: var(--text-black-700);
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 }
-.content{
+
+.main-project-title {
+  text-align: center;
+  font-size: 3em;
+  color: var(--text-black-700);
+  margin-bottom: 10px;
+}
+
+.content {
   position: relative;
   width: 1150px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.content .image{
+
+.content .image {
   position: relative;
   width: 800px;
-  height: 400px;
+  height: 360px;
   overflow: hidden;
+  border-radius: 10px;
 }
 
-.content .image img{
+.content .image img {
   z-index: 111;
   position: absolute;
   top: 0;
@@ -782,30 +817,54 @@ h3.my-professional{
   object-fit: cover;
   border-radius: 10px;
 }
-.content .text-box{
+
+.content .text-box {
   z-index: 222;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   padding: 40px;
   max-width: 400px;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  transform: translate(-80px,50px);
+  transform: translate(-80px, 50px);
 }
-.content .text-box h3{
+
+.content .text-box p {
+  text-align: left;
+  color: var(--text-black-700);
+}
+
+.content .text-box h3 {
   font-size: 2em;
   margin-bottom: 10px;
   color: var(--text-black-900);
 }
 
-.media-icons{
+.media-icons {
   display: flex;
 }
-.media-icons a{
+
+.media-icons a {
   color: var(--text-black-700);
   font-size: 2em;
   margin: 10px;
 }
+
+.content .text-box .key-skills {
+  margin-top: 10px;
+}
+
+.content .text-box .key-skills .skill-btn {
+  padding: 5px 20px 5px 20px;
+  border: none;
+  border-radius: 10px;
+  margin-left: 5px;
+  margin-bottom: 6px;
+  background-color: #1E3A8A;
+  color: white;
+  font-size: 0.8em;
+}
+
 /* Contact */
 .contact-title{
   color:var(--skin-color);
@@ -924,3 +983,37 @@ margin-bottom: 60px;
     max-width: 100%;
   }
 }
+
+/* new */
+/* .new-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.imageContainer img {
+  width: 500px;
+  height: auto;
+}
+
+.textContainer {
+  margin-left: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ffa500;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff8c00;
+} */

@@ -15,3 +15,20 @@ var typed= new Typed(".typing",{
 });
 
 
+// progress bar
+document.addEventListener('DOMContentLoaded', () => {
+  const progressBar = document.querySelector('.progress');
+
+  window.addEventListener('scroll', () => {
+    const projectContainer = document.querySelector('.content');
+    const projectContainerHeight = projectContainer.scrollHeight;
+    const projectContainerOffsetTop = projectContainer.offsetTop;
+    const windowScrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+    
+    const scrollPosition = windowScrollTop + windowHeight - projectContainerOffsetTop;
+    const scrollPercentage = Math.min((scrollPosition / projectContainerHeight) * 100, 100);
+
+    progressBar.style.width = `${scrollPercentage}%`;
+  });
+});
