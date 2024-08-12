@@ -2,13 +2,13 @@
 const styleSwitcherToggle=document.querySelector(".style-switcher-toggler");
 styleSwitcherToggle.addEventListener("click",()=>{
     console.log("hii")
-    document.querySelector(".style-switcher").classList.toggle("open");
+    document.querySelector(".style-switcher").classList.toggle("opendaynight");
 })
 
 //hide style- switcher on scroll
 window.addEventListener("scroll",()=>{
-    if(document.querySelector(".style-switcher").classList.contains("open")){
-        document.querySelector(".style-switcher").classList.remove("open");
+    if(document.querySelector(".style-switcher").classList.contains("opendaynight")){
+        document.querySelector(".style-switcher").classList.remove("opendaynight");
     }
 })
 

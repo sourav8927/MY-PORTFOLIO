@@ -734,6 +734,7 @@ h3.my-professional{
             rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
             translateZ(300px);
     }
+    
     .banner .content h1{
         text-align: center;
         width: 100%;
@@ -1020,6 +1021,53 @@ margin-bottom: 60px;
   .banner{
     height: 15vh;
   }
+  .larger-icon {
+    font-size: 50px; /* Adjust the size as needed */
+}
+.day-icon {
+  font-size: 50px; /* Adjust the size as needed */
+}
+.aside .nav-toggler{
+  height: 80px;
+  width: 85px;
+  
+}
+.aside .nav-toggler span{
+  height: 6px;
+  width: 40px;
+  background: var(--skin-color);
+  display: inline-block;
+  position: relative;
+}
+.aside .nav-toggler.open span{
+  background-color: transparent;
+}
+.aside .nav-toggler span::before{
+  content: '';
+  height: 6px;
+  width: 40px;
+  background: var(--skin-color);
+  position: absolute;
+  top: -13px;
+  left: 0;
+}
+.aside .nav-toggler.open span::before{
+  transform: rotate(45deg);
+  top: 0;
+}
+.aside .nav-toggler span::after{
+  content: '';
+  height: 6px;
+  width: 40px;
+  background: var(--skin-color);
+  position: absolute;
+  top: 13px;
+  left: 0;
+}
+.aside .nav-toggler.open span::after{
+  transform: rotate(-45deg);
+  top: 0;
+}
   .home .home-info{
     flex: 0 0 100%;
     max-width: 100%;
