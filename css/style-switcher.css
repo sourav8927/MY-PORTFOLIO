@@ -11,9 +11,9 @@
     transition: all 0.3s ease;
     transform: translateX(100%);
 }
-.open{
+/* .open{
     transform: translateX(-25px);
-}
+} */
 .style-switcher .s-icon{
     position: absolute;
     height: 40px;

@@ -54,7 +54,7 @@
             <span></span>
           </div>
           <ul class="nav">
-            <li><a href="#" class="active"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
             <li><a href="#about" ><i class="fa fa-user"></i>About</a></li>
             <li><a href="#services" ><i class="fa fa-list"></i>Services</a></li>
             <li><a href="#portfolio" ><i class="fa fa-briefcase"></i>Portfolio</a></li>
@@ -65,7 +65,7 @@
         <!-- ===main Content start=== -->
         <div class="main-content">
           <!-- ===Home section start=== -->
-          <section class="home section " id="home">
+          <section class="home active section " id="home">
             <div class="container">
               <div class="row">
                 <div class="home-info">
@@ -73,7 +73,7 @@
                   <h3 class="my-professional">I'm a <span class="typing"></span> </h3>
                   <p>I'm a Web & App Developper ,My experience is to create  design and develop with help of frontend and backend also  and many more.........</p>
                   <div class="hire-accounts">
-                    <a href="#contact" class="btn hire-me"style="box-shadow: 0 0 20px rgba(48,46,77,.5);">Hire Me</a>
+                    <a href="https://docs.google.com/document/d/10cAiR2JtngxZawPOfOcej30kl_BRBVSBkXBudbZeqfU/edit?usp=sharing" class="btn "style="box-shadow: 0 0 20px rgba(48,46,77,.5);">Download CV</a>
                     <div class="accounts-logo"> 
                       <a href=" www.linkedin.com/in/"><img src="images/linkedin.png" alt=""  class="accounts-img"></a>
                       <a href="https://github.com/sourav8927
@@ -144,8 +144,8 @@
                           </div>
                           <div class="row">
                             <div class="buttons padd-15">
-                              <a href="https://docs.google.com/document/d/10cAiR2JtngxZawPOfOcej30kl_BRBVSBkXBudbZeqfU/edit?usp=sharing" class="btn"style="box-shadow: 0 0 20px rgba(48,46,77,.5);">Download CV</a>
-                              <a href="#contact" class="btn hire-me" style="box-shadow: 0 0 20px rgba(48,46,77,.5);">Hire Me</a>
+                              <!-- <a href="https://docs.google.com/document/d/10cAiR2JtngxZawPOfOcej30kl_BRBVSBkXBudbZeqfU/edit?usp=sharing" class="btn"style="box-shadow: 0 0 20px rgba(48,46,77,.5);">Download CV</a> -->
+                              <a href="#contact" data-section-index="1" class="btn hire-me" style="box-shadow: 0 0 20px rgba(48,46,77,.5);">Hire Me</a>
                             </div>
                           </div>
                          </div>
@@ -937,18 +937,18 @@
   </div>
   <!-- Style Switcher End -->
    <!-- project js start-->
-    <script>
+    <!-- <script>
        ScrollReveal({
          reset: true ,
          distance:'50px',
-         duration:2500,
+         duration:200,
          delay:400
         });
         ScrollReveal().reveal('.main-title, .main-project-title',{delay:500,origin:'bottom'});
         ScrollReveal().reveal('.image',{delay:600,origin:'bottom'});
         ScrollReveal().reveal('.text-box',{delay:700,origin:'right'});
         ScrollReveal().reveal('.media-icons i',{delay:500,origin:'right',interval:200});
-    </script>
+    </script> -->
 <!-- project js end-->
  <!-- contact form js start-->
   <script>
@@ -956,8 +956,8 @@
       Email.send({
     Host : "smtp.gmail.com",
     Username : "souravkarmakar8927@gmail.com",
-    Password : "Souravkarmakar@6296",
-    To : 'karmakarbikram2003@gmail.com',
+    Password : "souravkarmakar@6296",
+    To : 'souravkarmakar8927@gmail.com',
     From : document.getElementById("email").value,
     Subject : "New Contact From Enquiry",
     Body :"Name: "+ document.getElementById("name").value
