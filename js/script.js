@@ -98,6 +98,14 @@ const nav= document.querySelector(".nav"),
       removeBackSection();
       addBackSection(sectionIndex);
     })
+    document.querySelector(".hire-for-sketch").addEventListener("click",function(){
+      const sectionIndex= this.getAttribute("data-section-index");
+      console.log(sectionIndex); 
+      showSection(this);
+      updateNav(this);
+      removeBackSection();
+      addBackSection(sectionIndex);
+    })
 const navToggelerBtn= document.querySelector(".nav-toggler"),
       aside=document.querySelector(".aside");
       navToggelerBtn.addEventListener("click",()=>{
