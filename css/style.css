@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Great+Vibes&family=Nabla&family=Poppins:wght@200;300;400;500;600&family=Sail&display=swap');
 
+
 :root{
   --bg-black-900:#f2f2fc;
   --bg-black-100:#fdf9ff;
@@ -67,6 +68,8 @@ ul{
  .back-section{
   z-index: 1;
 }
+
+
 @keyframes slideSection{
   0%{
     transform: translateX(100%);
@@ -75,6 +78,9 @@ ul{
     transform: translateX(0%);
   }
 }
+
+
+
 .hidden{
   display: none ;
 }
@@ -131,7 +137,7 @@ ul{
   flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px;
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
   position: relative;
 }
 .btn{
@@ -173,6 +179,8 @@ ul{
 }
 .aside .logo{
   position: absolute;
+  text-align: center;
+  align-items: center;
   top: 50px;
   font-size: 30px;
   text-transform: capitalize;
@@ -539,6 +547,10 @@ h3.my-professional{
 .about .about-content .timeline .timeline-date .fa{
   margin-right: 5px;
 }
+
+#workshops{
+ flex: auto;
+}
 .about .about-content .timeline .timeline-title{
   font-weight: 700;
   font-size: 18px;
@@ -787,7 +799,7 @@ h3.my-professional{
   position: sticky;
   top: 0;
   left: 0;
-  padding-top: 50px;
+  /* padding-top: 50px; */
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -1128,3 +1140,372 @@ button {
 button:hover {
   background-color: #ff8c00;
 } */
+
+/* workshop section style date-11/11/24*/
+/* Workshop Section Styles */
+.workshopNav{
+  border-radius:5px ;
+  display: flex;
+  border-width: 2px;
+  border-style: solid;
+  border-color: dodgerblue;
+  color: black;
+  text-align: center;
+  align-items: center;
+  padding-top: 4px;
+  padding-bottom: 2px;
+  background-color: white;
+}
+
+.workshopNavText:hover{
+  color: dodgerblue;
+}
+.workshop-titlediv{
+  width: 100%;
+  text-align: center;
+
+}
+.workshop-title{
+  color: var(--text-black-700);
+  padding-top: 5px;
+}
+.workshop-titleline{
+  width: 100%;
+  height: 2px;
+  background-color: gray;
+}
+.workshop-login {
+  border-radius: 10px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  height: 60px;
+  padding-right: 50px;
+}
+
+.workshop-login button {
+  background-color: var(--skin-color);
+  border: none;
+  font-size: 1rem;
+  padding: 8px 15px;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.workshop-login button:hover {
+  background-color: green;
+}
+
+.workshop-navline {
+  width: 100%;
+  height: 3px;
+  background-color: var(--text-black-900);
+  border-radius: 5px;
+  margin: 10px 0 20px;
+}
+
+.workshop-Allcards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:40px 200px;
+  padding: 20px;
+  
+}
+
+.workshop-cardMain {
+  flex: 1 1 45%;
+  min-width: 280px;
+  max-width: 400px;
+  
+  border-radius: 10px;
+  overflow: hidden;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.workshop-card:hover {
+  transform: scale(1.05);
+  border: 2px solid var(--skin-color);
+  
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); */
+}
+
+.workshop-card {
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  
+}
+.workshop-cardlaunch{
+  background-color: green;
+  color: white;
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+  
+}
+.workshop-card img {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+  transition: transform 0.3s ease;
+}
+/* .workshop-card img:hover{
+  border: 4px solid var(--skin-color);
+} */
+.workshop-cardMain:hover .workshop-card img {
+  transform: scale(1.1);
+}
+
+.workshop-cardbtn {
+  padding: 5px;
+  text-align: center;
+  display: flex;
+  gap: 10px;
+}
+
+.workshop-cardbtn button {
+  background-color: var(--skin-color);
+  border: none;
+  width: 80%;
+  margin: 10px 0;
+  font-size: 1rem;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.workshop-cardbtn button:hover {
+  background-color: #e63946;
+  transform: translateY(-2px);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.workshop-cardMain {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Modal background */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+/* Modal content box */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 700px;
+  height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Full width and height for iframe */
+.modal-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Close button styling */
+.close-btn {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0; /* Remove border radius for a fullscreen modal on mobile */
+    padding: 0;
+  }
+
+  .modal-content iframe {
+    height: 100vh; /* Maximize iframe height to fit entire screen */
+  }
+}
+
+
+.workshop-schedule-main{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  padding-top: 5px;
+  gap: 50px;
+  padding-left: 50px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding-bottom: 5px;
+}
+
+.workshop-schedule{
+  display: flex;
+ align-items: center;
+  text-align: center;
+  gap: 5px;
+}
+.workshop-schedule-text{
+  padding-top: 5px;
+}
+.workshop-schedule-mode{
+  padding-top: 5px;
+}
+.workshop-schedule-date{
+  padding-top: 5px;
+}
+/*game start*/
+
+/* Background */
+.background {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(0, 0, 30, 0.8), rgba(0, 0, 50, 0.9)),
+              linear-gradient(135deg, rgba(0, 150, 255, 0.7), rgba(0, 70, 120, 0.7));
+  background-blend-mode: overlay;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease;
+}
+
+/* Glassmorphism Card */
+.glass-card {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+/* Heading */
+.glass-card h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #00bfff;
+}
+
+/* Paragraph */
+.glass-card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #d9d9d9;
+}
+
+/* Button */
+.explore-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #000;
+  background-color: #00bfff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: #0099cc;
+}
+
+/* Game Cards Container */
+.game-cards-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 20px;
+  width: 90%;
+  max-width: 1000px;
+}
+
+/* Game Card */
+.game-card {
+  min-width: 300px;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.game-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.game-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+  color: #00bfff;
+}
+
+.game-card p {
+  font-size: 1rem;
+  color: #d9d9d9;
+  margin-bottom: 10px;
+}
+
+/* Install Button */
+.install-btn {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  color: #000;
+  background-color: #00bfff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.install-btn:hover {
+  background-color: #0099cc;
+}

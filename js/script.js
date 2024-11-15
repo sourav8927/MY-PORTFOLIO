@@ -39,6 +39,8 @@ const nav= document.querySelector(".nav"),
     totalNavList=navList.length,
     allSection= document.querySelectorAll(".section"),
     totalSection= allSection.length;
+    console.log(totalNavList);
+    console.log(totalSection);
     for(let i=0;i<totalNavList; i++){
       const a=navList[i].querySelector("a");
       a.addEventListener("click", function(){
@@ -118,3 +120,87 @@ const navToggelerBtn= document.querySelector(".nav-toggler"),
         allSection[i].classList.toggle("open");
       }
 }
+// Function to open the form modal
+function openForm() {
+  document.getElementById("formModal").style.display = "block";
+}
+
+// Function to close the form modal
+function closeForm() {
+  document.getElementById("formModal").style.display = "none";
+}
+
+// Close the modal when clicking outside of it
+window.onclick = function(event) {
+  const modal = document.getElementById("formModal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+function openForm() {
+  document.getElementById("formModal").style.display = "flex";
+}
+
+function closeForm() {
+  document.getElementById("formModal").style.display = "none";
+}
+
+
+/*games*/
+const backgroundElement = document.querySelector('.background');
+
+// Array of background images
+const backgroundImages = [
+  "url('images/gamebackground.jpg')",
+  "url('images/gamebg2.jpg')",
+  "url('images/gamebg3.jpg')"
+];
+
+let currentImageIndex = 0;
+
+// Function to change background image
+function changeBackgroundImage() {
+  // Update the background image
+  backgroundElement.style.backgroundImage = backgroundImages[currentImageIndex];
+  
+  // Move to the next image, loop back to the first one
+  currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
+}
+
+// Set interval to change the background image every second (1000 ms)
+setInterval(changeBackgroundImage, 1000);
+
+// Initial background image
+changeBackgroundImage();
+
+// JavaScript code to handle form submission counter
+
+// Function to open the form modal
+function openForm() {
+  document.getElementById("formModal").style.display = "block";
+}
+
+// Function to close the form modal
+function closeForm() {
+  document.getElementById("formModal").style.display = "none";
+}
+
+// Function to increment the counter
+function confirmSubmission() {
+  // Select the counter element
+  const counterElement = document.querySelector(".workshop-schedule-text");
+  // Parse the current counter value as an integer
+  let currentCount = parseInt(counterElement.textContent);
+  // Increment the count
+  currentCount += 1;
+  // Update the counter element with the new count
+  counterElement.textContent = currentCount;
+}
+
+// Add an event listener to the window to close the modal when clicking outside it
+window.onclick = function(event) {
+  const modal = document.getElementById("formModal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
